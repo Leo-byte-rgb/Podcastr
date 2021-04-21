@@ -1,0 +1,138 @@
+.playerContainer {
+  padding: 3rem 4rem;
+  width: 26.5rem;
+  height: 100vh;
+
+  background: var(--purple-500);
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  strong {
+    font-family: Lexend, sans-serif;
+    font-weight: 600;
+  }
+  footer {
+    align-self: stretch;
+    &.empty {
+      opacity: 0.5;
+    }
+  }
+  @media (max-width: 1024px) {
+    position: fixed;
+    bottom: 0;
+    height: 10rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem;
+  }
+  @media (max-width: 500px) {
+    justify-content: center;
+    header > img,
+    strong {
+      display: none;
+    }
+
+    padding: 1rem 1.5rem;
+  }
+  .mobilePlayer {
+  display: none;
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 1 !important;
+
+  }
+}
+}
+
+.emptyPlayer {
+  width: 100%;
+  height: 20rem;
+  border: 1.5px dashed var(--purple-300);
+  background: linear-gradient(
+    143.8deg,
+    rgba(145, 100, 250, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+
+  span {
+    display: inline-block;
+    width: 4rem;
+    text-align: center;
+  }
+  .slider {
+    flex: 1;
+    .emptySlider {
+      width: 100%;
+      height: 4px;
+      background: var(--purple-300);
+      border-radius: 2px;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+  gap: 1.5rem;
+
+  button {
+    background: transparent;
+    border: 0;
+    font-size: 0;
+
+    &.playButton {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1rem;
+      background: var(--purple-400);
+    }
+  }
+  @media (max-width: 1024px) {
+    margin-top: 1rem;
+  }
+}
+
+
