@@ -1,10 +1,10 @@
 .wrapper {
-    display: flex;
-    main {
-        flex: 1;
-    }
+  display: flex;
+  main {
+    flex: 1;
+  }
 
-    @media (max-width: 1024px) {
-        display: block;
-    }
+  @media (max-width: 1024px) {
+    display: block;
+  }
 }
